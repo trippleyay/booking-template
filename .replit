@@ -12,3 +12,17 @@ deploymentTarget = "cloudrun"
 [[ports]]
 localPort = 3001
 externalPort = 80
+
+[userenv]
+
+[userenv.shared]
+SUPABASE_URL = "https://avspxhykfvqwyolgzcke.supabase.co"
+RESEND_FROM_EMAIL = "Lumé Studio <onboarding@resend.dev>"
+ADMIN_EMAIL = "admin@lumestudio.com"
+STRIPE_PUBLISHABLE_KEY = "pk_test_51U1vjkLwz82EnweMKL2SFuxdgE5ZMOlhGUC3A6Z9cdAuJkOpRqVyAVFqNIz2U5SryfbAKzZtBhdgqIuUdT1EMxIw00BbSiJn3H"
+VITE_STRIPE_PUBLISHABLE_KEY = "pk_test_51U1vjkLwz82EnweMKL2SFuxdgE5ZMOlhGUC3A6Z9cdAuJkOpRqVyAVFqNIz2U5SryfbAKzZtBhdgqIuUdT1EMxIw00BbSiJn3H VITE_SUPABASE_URL=https://avspxhykfvqwyolgzcke.supabase.co"
+VITE_SUPABASE_URL = "https://avspxhykfvqwyolgzcke.supabase.co"
+VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF2c3B4aHlrZnZxd3lvbGd6Y2tlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYxMzEzNjQsImV4cCI6MjEwMTcwNzM2NH0.bhvmQb746Q_FBzoba1EyY5EmeJ4rnSfnkiYi1hZ0YNQ"
+SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImF2c3B4aHlrZnZxd3lvbGd6Y2tlIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4NjEzMTM2NCwiZXhwIjoyMTAxNzA3MzY0fQ.EaQV33bjjKUCg6sRKdWkXsj2Nuj4iQraNjBXM6DX6Tw"
+PUBLIC_URL = "https://booking-template--trippleyay.replit.app"
+PORT = "3000"
