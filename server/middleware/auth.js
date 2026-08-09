@@ -1,7 +1,7 @@
-import { createClient } from "@supabase/supabase-js";
+import { createServerClient } from "../lib/createServerClient.js";
 
 // Anon client used only to verify the JWT from the request header
-const supabaseAuth = createClient(
+const supabaseAuth = createServerClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_ANON_KEY
 );
