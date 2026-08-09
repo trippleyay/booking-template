@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment — never commit real credentials
+.env
+.env.*
+!.env.example
+
+# Audit / working notes, not part of the template
+AUDIT.md
+
+# Local tooling downloads
+stripe.tar.gz
+stripe
+*.tar.gz
+
+# Stray directory from a shell that didn't expand braces
+{src*/
+
+# Logs and editor cruft
+*.log
+npm-debug.log*
+.DS_Store
+.vscode/
+.idea/
+
+# Local Claude Code permissions, not part of the template
+.claude/

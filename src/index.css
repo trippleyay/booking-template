@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Design tokens.
+
+   These are the light-theme defaults so the page has something
+   sensible to paint before the config request resolves; useTheme
+   overwrites them at runtime from businessConfig.theme.
+   ============================================================ */
+:root {
+  --primary:     #C084FC;
+  --secondary:   #F3E8FF;
+  --accent:      #7C3AED;
+  --background:  #FFFFFF;
+  --surface:     #FAFAFA;
+  --text:        #1A1A1A;
+  --text-muted:  #6B7280;
+  --border:      #E5E7EB;
+  --radius:      12px;
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body:    "Inter", system-ui, sans-serif;
+
+  /* Translucent fill for the floating nav. Derived from theme.background
+     at runtime so it tracks any palette instead of assuming a light one. */
+  --nav-bg: rgba(255, 255, 255, 0.92);
+  --nav-bg-idle: rgba(255, 255, 255, 0.7);
+
+  /* Card elevation. Warm-tinted rather than neutral grey so shadows sit
+     against the background instead of muddying it. */
+  --shadow-sm: 0 1px 2px rgba(16, 12, 8, 0.05), 0 1px 3px rgba(16, 12, 8, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(16, 12, 8, 0.07), 0 2px 4px -2px rgba(16, 12, 8, 0.06);
+  --shadow-lg: 0 10px 20px -4px rgba(16, 12, 8, 0.10), 0 4px 8px -4px rgba(16, 12, 8, 0.06);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* The hero video is decorative; anyone asking for reduced motion gets the
+   poster image instead. Paired with a matching check in LandingPage so the
+   video is never even fetched. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
